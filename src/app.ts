@@ -13,11 +13,11 @@ async function initializeRedis() {
         console.log(`Initializing Redis`);
         const redis = RedisInitializer.getInstance();
         // default mode
-        // await redis.init();
+        await redis.init();
         // Broadcast mode
         // await redis.init(constants.CLIENT_TRACKING_MODES.BCAST);
         // Optin 
-        await redis.init(constants.CLIENT_TRACKING_MODES.OPTIN);
+        // await redis.init(constants.CLIENT_TRACKING_MODES.OPTIN);
     } catch (error) {
         console.log(`Failed to Initialize Redis`);
         process.exit(1);
